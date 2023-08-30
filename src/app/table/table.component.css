@@ -2,31 +2,50 @@
     flex: 1 1 auto;
 }
 
-.table-container {
-    padding: 16px;
-}
-
 table {
     width: 100%;
     margin-top: 16px;
 }
 
+mat-toolbar {
+    margin-bottom: 24px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
 th.mat-header-cell {
-    text-align: center;
-    background-color: #3f51b5;
+    background-color: #5c6bc0;
     color: white;
+    padding: 16px;
 }
 
 td.mat-cell {
-    text-align: center;
-    border-bottom: 1px solid #3f51b5;
+    border: none;
+    padding: 16px;
+    border-bottom: 1px solid #e0e0e0;
 }
 
 input {
-    width: 70px;
-    text-align: center;
+    border: 1px solid #e0e0e0;
+    padding: 6px 12px;
+    border-radius: 4px;
+    outline: none;
+    transition: border 0.2s;
 }
 
-mat-toolbar {
-    margin-bottom: 24px;
+input:focus {
+    border-color: #5c6bc0;
+}
+
+button:disabled {
+    opacity: 0.6;
+}
+
+button+button {
+    margin-left: 10px;
 }
