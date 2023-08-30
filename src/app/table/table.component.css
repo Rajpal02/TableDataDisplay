@@ -12,10 +12,14 @@ mat-toolbar {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-.table-container {
+/* .table-container {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
     overflow: hidden;
+} */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
 }
 
 th.mat-header-cell {
@@ -48,4 +52,28 @@ button:disabled {
 
 button+button {
     margin-left: 10px;
+}
+
+@media (max-width: 600px) {
+
+    th[mat-header-cell]:nth-child(2),
+    td[mat-cell]:nth-child(2),
+    th[mat-header-cell]:nth-child(8),
+    td[mat-cell]:nth-child(8) {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    input {
+        width: 70%;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 600px) {
+    button[mat-raised-button] {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
 }
